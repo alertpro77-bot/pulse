@@ -1,0 +1,651 @@
+
+html_v2 = '''<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulse — Data savings and partner income for Ghanaians</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="nav" id="nav">
+        <a href="#" class="nav-logo">
+            <span class="logo-mark"></span>
+            <span class="logo-word">Pulse</span>
+        </a>
+        <div class="nav-links">
+            <a href="#bundles" class="nav-link">Bundles</a>
+            <a href="#partner" class="nav-link">Partner</a>
+            <a href="#faq" class="nav-link">FAQ</a>
+            <a href="#partner" class="nav-link nav-link--primary">Get started</a>
+        </div>
+        <button class="nav-menu-btn" onclick="toggleMenu()" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#bundles" onclick="toggleMenu()">Bundles</a>
+        <a href="#partner" onclick="toggleMenu()">Partner</a>
+        <a href="#faq" onclick="toggleMenu()">FAQ</a>
+        <a href="#partner" onclick="toggleMenu()">Get started</a>
+    </div>
+
+    <!-- HERO — NOT 100vh. Content-led, catalogue intro. -->
+    <header class="hero">
+        <div class="hero-inner">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                2,847 members optimizing their data spend
+            </div>
+            <h1 class="hero-title">
+                Stop overpaying for data.<br>
+                <span class="hero-title--accent">Start earning from it.</span>
+            </h1>
+            <p class="hero-body">
+                Pulse connects Ghanaians to optimized data bundles at prices 
+                most people never see. Members save an average of 
+                <strong>₵1,800 per year</strong>. Partners earn daily commissions 
+                helping others do the same.
+            </p>
+            <div class="hero-actions">
+                <a href="#bundles" class="btn btn--primary">Browse bundles</a>
+                <a href="#partner" class="btn btn--secondary">Become a partner</a>
+            </div>
+            <div class="hero-trust">
+                <div class="trust-avatars">
+                    <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=48&h=48&fit=crop&crop=face" alt="" class="trust-avatar">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=48&h=48&fit=crop&crop=face" alt="" class="trust-avatar">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=48&h=48&fit=crop&crop=face" alt="" class="trust-avatar">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=48&h=48&fit=crop&crop=face" alt="" class="trust-avatar">
+                </div>
+                <p class="trust-text">Trusted by students, shop owners, and professionals across Ghana</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- STATS BAR — Stat-led credibility strip -->
+    <section class="stats-bar">
+        <div class="stat">
+            <span class="stat-value" data-count="2847">0</span>
+            <span class="stat-label">Active members</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+            <span class="stat-value" data-count="847">0</span>
+            <span class="stat-label">Pulse partners</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+            <span class="stat-value">₵<span data-count="24" data-prefix="">0</span>M+</span>
+            <span class="stat-label">Total member savings</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+            <span class="stat-value" data-count="997" data-suffix="%">0</span>
+            <span class="stat-label">Delivery success rate</span>
+        </div>
+    </section>
+
+    <!-- BUNDLES — Catalogue grid, the core offering -->
+    <section class="section" id="bundles">
+        <div class="section-header">
+            <span class="section-eyebrow">Optimized bundles</span>
+            <h2 class="section-title">Same data. Smarter price.</h2>
+            <p class="section-body">All bundles work on every major Ghanaian network. Delivered in under 10 seconds.</p>
+        </div>
+
+        <div class="bundle-grid">
+            <!-- Bundle 1 -->
+            <article class="bundle-card">
+                <div class="bundle-card__header">
+                    <span class="bundle-card__tag">Popular</span>
+                </div>
+                <div class="bundle-card__body">
+                    <div class="bundle-card__size">5 GB</div>
+                    <div class="bundle-card__price">
+                        <span class="bundle-card__amount">₵28</span>
+                        <span class="bundle-card__compare">₵55</span>
+                    </div>
+                    <div class="bundle-card__save">Save ₵27 per bundle</div>
+                    <ul class="bundle-card__features">
+                        <li class="bundle-card__feature">
+                            <svg class="feature-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Instant activation
+                        </li>
+                        <li class="bundle-card__feature">
+                            <svg class="feature-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            30-day validity
+                        </li>
+                        <li class="bundle-card__feature">
+                            <svg class="feature-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            All networks
+                        </li>
+                    </ul>
+                </div>
+                <div class="bundle-card__footer">
+                    <button class="btn btn--primary btn--full" onclick="openBuyModal('5 GB', 28)">Get this bundle</button>
+                </div>
+            </article>
+
+            <!-- Bundle 2 — Featured -->
+            <article class="bundle-card bundle-card--featured">
+                <div class="bundle-card__header">
+                    <span class="bundle-card__tag bundle-card__tag--featured">Best value</span>
+                </div>
+                <div class="bundle-card__body">
+                    <div class="bundle-card__size">10 GB</div>
+                    <div class="bundle-card__price">
+                        <span class="bundle-card__amount">₵35</span>
+                        <span class="bundle-card__compare">₵75</span>
+                    </div>
+                    <div class="bundle-card__save">Save ₵40 per bundle</div>
+                    <ul class="bundle-card__features">
+                        <li class="bundle-card__feature">
+                            <svg class="feature-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Instant activation
+                        </li>
+                        <li class="bundle-card__feature">
+                            <svg class="feature-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            30-day validity
+                        </li>
+                        <li class="bundle-card__feature">
+                            <svg class="feature-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            All networks
+                        </li>
+                        <li class="bundle-card__feature">
+                            <svg class="feature-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Highest savings
+                        </li>
+                    </ul>
+                </div>
+                <div class="bundle-card__footer">
+                    <button class="btn btn--primary btn--full" onclick="openBuyModal('10 GB', 35)">Get this bundle</button>
+                </div>
+            </article>
+
+            <!-- Bundle 3 -->
+            <article class="bundle-card">
+                <div class="bundle-card__header">
+                    <span class="bundle-card__tag">Power user</span>
+                </div>
+                <div class="bundle-card__body">
+                    <div class="bundle-card__size">20 GB</div>
+                    <div class="bundle-card__price">
+                        <span class="bundle-card__amount">₵60</span>
+                        <span class="bundle-card__compare">₵120</span>
+                    </div>
+                    <div class="bundle-card__save">Save ₵60 per bundle</div>
+                    <ul class="bundle-card__features">
+                        <li class="bundle-card__feature">
+                            <svg class="feature-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Instant activation
+                        </li>
+                        <li class="bundle-card__feature">
+                            <svg class="feature-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            30-day validity
+                        </li>
+                        <li class="bundle-card__feature">
+                            <svg class="feature-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            All networks
+                        </li>
+                    </ul>
+                </div>
+                <div class="bundle-card__footer">
+                    <button class="btn btn--primary btn--full" onclick="openBuyModal('20 GB', 60)">Get this bundle</button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS — Long-document step flow -->
+    <section class="section section--muted">
+        <div class="section-header section-header--center">
+            <span class="section-eyebrow">How it works</span>
+            <h2 class="section-title">From waste to optimization in four steps</h2>
+        </div>
+
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3 class="step-title">Join Pulse</h3>
+                    <p class="step-body">Register with your phone number. No paperwork, no ID required. Takes under a minute.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3 class="step-title">See your savings</h3>
+                    <p class="step-body">Pulse analyzes your current spend and shows exactly how much you are overpaying. The number is usually shocking.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3 class="step-title">Switch to optimized</h3>
+                    <p class="step-body">Buy your first optimized bundle. Same data, same speed, delivered in under 10 seconds. Pay with Mobile Money.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3 class="step-title">Track and grow</h3>
+                    <p class="step-body">Watch your savings accumulate in your dashboard. When you are ready, explore the Partner Program to earn from referrals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARTNER PROGRAM — The income side -->
+    <section class="section" id="partner">
+        <div class="partner-banner">
+            <div class="partner-banner__content">
+                <span class="partner-banner__eyebrow">Partner applications closing soon</span>
+                <div class="countdown" id="countdown">
+                    <div class="countdown-unit">
+                        <span class="countdown-value" id="hours">04</span>
+                        <span class="countdown-label">hours</span>
+                    </div>
+                    <span class="countdown-sep">:</span>
+                    <div class="countdown-unit">
+                        <span class="countdown-value" id="minutes">37</span>
+                        <span class="countdown-label">minutes</span>
+                    </div>
+                    <span class="countdown-sep">:</span>
+                    <div class="countdown-unit">
+                        <span class="countdown-value" id="seconds">52</span>
+                        <span class="countdown-label">seconds</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-header">
+            <span class="section-eyebrow">Pulse partner program</span>
+            <h2 class="section-title">Help others save. Earn while you do it.</h2>
+            <p class="section-body">Partners earn commissions by helping friends and family optimize their data spend. No inventory. No upfront cost. Just your phone and your network.</p>
+        </div>
+
+        <div class="partner-grid">
+            <div class="partner-card">
+                <div class="partner-card__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <h3 class="partner-card__title">Set your margin</h3>
+                <p class="partner-card__body">Control your pricing within Pulse guidelines. Help others save while you earn a fair commission on every referral.</p>
+                <div class="partner-card__metric">
+                    <span class="metric-label">Typical commission</span>
+                    <span class="metric-value">₵15 — ₵25</span>
+                </div>
+            </div>
+
+            <div class="partner-card">
+                <div class="partner-card__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                </div>
+                <h3 class="partner-card__title">Build your team</h3>
+                <p class="partner-card__body">Recruit sub-partners and earn override commissions on their referrals. Build a sustainable income structure.</p>
+                <div class="partner-card__metric">
+                    <span class="metric-label">Override rate</span>
+                    <span class="metric-value">5% on sub-sales</span>
+                </div>
+            </div>
+
+            <div class="partner-card">
+                <div class="partner-card__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <h3 class="partner-card__title">Instant withdrawals</h3>
+                <p class="partner-card__body">Your earnings go straight to your Mobile Money account. Any amount, any time, under two minutes. No holds, no fees.</p>
+                <div class="partner-card__metric">
+                    <span class="metric-label">Withdrawal time</span>
+                    <span class="metric-value">Under 2 min</span>
+                </div>
+            </div>
+
+            <div class="partner-card">
+                <div class="partner-card__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                </div>
+                <h3 class="partner-card__title">Live dashboard</h3>
+                <p class="partner-card__body">Track every referral, every commission, and every withdrawal in real time. Transparent numbers, full visibility.</p>
+                <div class="partner-card__metric">
+                    <span class="metric-label">Tracking</span>
+                    <span class="metric-value">Real-time</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Income calculator -->
+        <div class="calculator">
+            <h3 class="calculator__title">Estimate your partner income</h3>
+            <div class="calculator__control">
+                <label class="calculator__label">I help <span id="referralCount" class="calculator__highlight">10</span> people optimize their data per day</label>
+                <input type="range" min="1" max="50" value="10" class="calculator__slider" id="incomeSlider" oninput="updateIncome()">
+                <div class="calculator__ticks">
+                    <span>1</span>
+                    <span>25</span>
+                    <span>50</span>
+                </div>
+            </div>
+            <div class="calculator__results">
+                <div class="result">
+                    <span class="result__label">Daily</span>
+                    <span class="result__value" id="dailyIncome">₵170</span>
+                </div>
+                <div class="result result--highlight">
+                    <span class="result__label">Monthly</span>
+                    <span class="result__value" id="monthlyIncome">₵5,100</span>
+                </div>
+                <div class="result">
+                    <span class="result__label">Yearly</span>
+                    <span class="result__value" id="yearlyIncome">₵61,200</span>
+                </div>
+            </div>
+            <p class="calculator__note">Based on average commission of ₵17 per optimization. Actual results depend on effort and network size.</p>
+        </div>
+
+        <div class="partner-cta">
+            <button class="btn btn--primary btn--large" onclick="openPartnerModal()">Apply for partner program — free</button>
+            <p class="partner-cta__note">No credit card required. Applications reviewed within 24 hours.</p>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section section--muted">
+        <div class="section-header section-header--center">
+            <span class="section-eyebrow">Member stories</span>
+            <h2 class="section-title">Real people. Real savings. Real income.</h2>
+        </div>
+
+        <div class="testimonial-grid">
+            <blockquote class="testimonial">
+                <div class="testimonial__stars">
+                    <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l2.1 4.3L15 6l-3.4 3.3L12.2 14 8 11.7 3.8 14l.6-4.7L1 6l4.9-.7z"/></svg>
+                    <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l2.1 4.3L15 6l-3.4 3.3L12.2 14 8 11.7 3.8 14l.6-4.7L1 6l4.9-.7z"/></svg>
+                    <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l2.1 4.3L15 6l-3.4 3.3L12.2 14 8 11.7 3.8 14l.6-4.7L1 6l4.9-.7z"/></svg>
+                    <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l2.1 4.3L15 6l-3.4 3.3L12.2 14 8 11.7 3.8 14l.6-4.7L1 6l4.9-.7z"/></svg>
+                    <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l2.1 4.3L15 6l-3.4 3.3L12.2 14 8 11.7 3.8 14l.6-4.7L1 6l4.9-.7z"/></svg>
+                </div>
+                <p class="testimonial__body">"Pulse showed me I was spending ₵2,100 a year on data. After switching to optimized bundles, I spend ₵900. The ₵1,200 difference covers my school fees."</p>
+                <footer class="testimonial__footer">
+                    <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=48&h=48&fit=crop&crop=face" alt="" class="testimonial__avatar">
+                    <div class="testimonial__meta">
+                        <cite class="testimonial__name">Abena Mensah</cite>
+                        <span class="testimonial__role">Student, University of Ghana</span>
+                    </div>
+                </footer>
+            </blockquote>
+
+            <blockquote class="testimonial testimonial--featured">
+                <div class="testimonial__stars">
+                    <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l2.1 4.3L15 6l-3.4 3.3L12.2 14 8 11.7 3.8 14l.6-4.7L1 6l4.9-.7z"/></svg>
+                    <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l2.1 4.3L15 6l-3.4 3.3L12.2 14 8 11.7 3.8 14l.6-4.7L1 6l4.9-.7z"/></svg>
+                    <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l2.1 4.3L15 6l-3.4 3.3L12.2 14 8 11.7 3.8 14l.6-4.7L1 6l4.9-.7z"/></svg>
+                    <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l2.1 4.3L15 6l-3.4 3.3L12.2 14 8 11.7 3.8 14l.6-4.7L1 6l4.9-.7z"/></svg>
+                    <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l2.1 4.3L15 6l-3.4 3.3L12.2 14 8 11.7 3.8 14l.6-4.7L1 6l4.9-.7z"/></svg>
+                </div>
+                <p class="testimonial__body">"I run a small shop in Kumasi. I became a Pulse Partner and now help my customers optimize their data. My commission income often exceeds my shop profit."</p>
+                <footer class="testimonial__footer">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=48&h=48&fit=crop&crop=face" alt="" class="testimonial__avatar">
+                    <div class="testimonial__meta">
+                        <cite class="testimonial__name">Kwame Asante</cite>
+                        <span class="testimonial__role">Shop owner, Kumasi</span>
+                    </div>
+                </footer>
+            </blockquote>
+
+            <blockquote class="testimonial">
+                <div class="testimonial__stars">
+                    <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l2.1 4.3L15 6l-3.4 3.3L12.2 14 8 11.7 3.8 14l.6-4.7L1 6l4.9-.7z"/></svg>
+                    <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l2.1 4.3L15 6l-3.4 3.3L12.2 14 8 11.7 3.8 14l.6-4.7L1 6l4.9-.7z"/></svg>
+                    <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l2.1 4.3L15 6l-3.4 3.3L12.2 14 8 11.7 3.8 14l.6-4.7L1 6l4.9-.7z"/></svg>
+                    <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l2.1 4.3L15 6l-3.4 3.3L12.2 14 8 11.7 3.8 14l.6-4.7L1 6l4.9-.7z"/></svg>
+                    <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l2.1 4.3L15 6l-3.4 3.3L12.2 14 8 11.7 3.8 14l.6-4.7L1 6l4.9-.7z"/></svg>
+                </div>
+                <p class="testimonial__body">"As a mother of three, I needed flexible income. The Pulse Partner program lets me help neighbors save on data while I earn commissions from home."</p>
+                <footer class="testimonial__footer">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=48&h=48&fit=crop&crop=face" alt="" class="testimonial__avatar">
+                    <div class="testimonial__meta">
+                        <cite class="testimonial__name">Esi Owusu</cite>
+                        <span class="testimonial__role">Stay-at-home mom, Tema</span>
+                    </div>
+                </footer>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+        <div class="section-header section-header--center">
+            <span class="section-eyebrow">Questions</span>
+            <h2 class="section-title">Everything you need to know</h2>
+        </div>
+
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary class="faq-item__question">
+                    <span>Is Pulse legal? How does the optimization work?</span>
+                    <span class="faq-item__icon">
+                        <svg viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                </summary>
+                <div class="faq-item__answer">
+                    <p>Pulse is 100% legal. We operate as a data optimization and digital services platform. We aggregate demand from our member base and negotiate efficient bundle access through authorized digital channels. Think of us as a buying club — more members, better rates. We have been operating for three years with zero legal issues and full regulatory compliance.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-item__question">
+                    <span>How fast is data delivery?</span>
+                    <span class="faq-item__icon">
+                        <svg viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                </summary>
+                <div class="faq-item__answer">
+                    <p>Average delivery time is 8 seconds. In rare cases of network congestion, it may take up to 5 minutes. But 99.7% of orders arrive before you finish reading this sentence. All deliveries are tracked in real time on your Pulse dashboard.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-item__question">
+                    <span>Do I need to pay to become a Pulse Partner?</span>
+                    <span class="faq-item__icon">
+                        <svg viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                </summary>
+                <div class="faq-item__answer">
+                    <p>Partner registration is free for qualifying applicants in this batch. We review applications to ensure partners understand the platform and can provide quality support to their referrals. Future batches may require a small onboarding fee.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-item__question">
+                    <span>What if I buy a bundle and it does not arrive?</span>
+                    <span class="faq-item__icon">
+                        <svg viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                </summary>
+                <div class="faq-item__answer">
+                    <p>Full refund. No questions. No delays. Our support team is available 24/7 on WhatsApp. In three years, we have processed over 500,000 optimizations. The failure rate is 0.3%.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-item__question">
+                    <span>Can I withdraw earnings to Mobile Money anytime?</span>
+                    <span class="faq-item__icon">
+                        <svg viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                </summary>
+                <div class="faq-item__answer">
+                    <p>Yes. Any amount. Any time. Day or night. Weekend or weekday. Your earnings are yours. We do not hold them, delay them, or charge withdrawal fees. Most withdrawals arrive in under two minutes.</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="section section--final">
+        <div class="final-cta">
+            <h2 class="final-cta__title">Two choices. One is expensive.</h2>
+            <div class="choice-comparison">
+                <div class="choice choice--lose">
+                    <span class="choice__label">Keep overpaying</span>
+                    <p class="choice__body">Continue buying data at full price. Lose ₵1,800 per year to inefficiency. Watch others optimize while you pay the premium.</p>
+                    <span class="choice__result">Same spend. Same waste.</span>
+                </div>
+                <span class="choice__or">or</span>
+                <div class="choice choice--win">
+                    <span class="choice__label">Join Pulse</span>
+                    <p class="choice__body">Start optimizing your data spend today. Save ₵1,800 per year. Then explore the Partner Program and turn your knowledge into income.</p>
+                    <span class="choice__result">New savings. New income.</span>
+                </div>
+            </div>
+            <div class="final-cta__actions">
+                <a href="#bundles" class="btn btn--primary btn--large">Browse bundles</a>
+                <a href="#partner" class="btn btn--secondary btn--large">Become a partner</a>
+            </div>
+            <p class="final-cta__note"><span class="live-pip"></span> 12 people joined Pulse while you were reading this.</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <span class="logo-mark logo-mark--small"></span>
+                <span class="footer__word">Pulse</span>
+                <p class="footer__tagline">Smart data. Smarter spending.</p>
+            </div>
+            <div class="footer__links">
+                <div class="footer__col">
+                    <h4 class="footer__heading">Platform</h4>
+                    <a href="#bundles">Bundles</a>
+                    <a href="#partner">Partner program</a>
+                    <a href="#">Pricing</a>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__heading">Support</h4>
+                    <a href="#faq">FAQ</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Terms</a>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__heading">Connect</h4>
+                    <a href="#">WhatsApp</a>
+                    <a href="#">Telegram</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© 2026 Pulse. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- STICKY WHATSAPP -->
+    <a href="https://wa.me/233XXXXXXXXX" class="sticky-wa" id="stickyWa" target="_blank" rel="noopener">
+        <span class="sticky-wa__pulse"></span>
+        <svg class="sticky-wa__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.249-.463-2.382-1.476-.881-.788-1.476-1.762-1.65-2.06-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span class="sticky-wa__text">Chat</span>
+    </a>
+
+    <!-- BUY MODAL -->
+    <div class="modal" id="buyModal">
+        <div class="modal__overlay" onclick="closeModal('buyModal')"></div>
+        <div class="modal__panel">
+            <div class="modal__header">
+                <h3 class="modal__title">Get <span id="modalBundleName">bundle</span></h3>
+                <button class="modal__close" onclick="closeModal('buyModal')" aria-label="Close">
+                    <svg viewBox="0 0 16 16" fill="none"><path d="M4 4l8 8m0-8l-8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </button>
+            </div>
+            <div class="modal__body">
+                <div class="modal__price">₵<span id="modalPrice">0</span></div>
+                <form class="modal__form" onsubmit="handleFormSubmit(event, this)">
+                    <div class="field">
+                        <label class="field__label">Phone number</label>
+                        <input type="tel" class="field__input" placeholder="0244 123 456" required>
+                    </div>
+                    <div class="field">
+                        <label class="field__label">Network preference</label>
+                        <select class="field__input field__select" required>
+                            <option value="">Select network</option>
+                            <option>MTN</option>
+                            <option>Telecel</option>
+                            <option>AirtelTigo</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">Pay ₵<span id="modalBtnPrice">0</span> with MoMo</button>
+                </form>
+                <p class="modal__note">You will receive a payment prompt on your phone.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PARTNER MODAL -->
+    <div class="modal" id="partnerModal">
+        <div class="modal__overlay" onclick="closeModal('partnerModal')"></div>
+        <div class="modal__panel">
+            <div class="modal__header">
+                <h3 class="modal__title">Apply for Pulse Partner</h3>
+                <button class="modal__close" onclick="closeModal('partnerModal')" aria-label="Close">
+                    <svg viewBox="0 0 16 16" fill="none"><path d="M4 4l8 8m0-8l-8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </button>
+            </div>
+            <div class="modal__body">
+                <div class="modal__alert">
+                    <span class="modal__alert-dot"></span>
+                    <strong>Limited slots available in this batch</strong>
+                </div>
+                <form class="modal__form" onsubmit="handleFormSubmit(event, this)">
+                    <div class="field">
+                        <label class="field__label">Full name</label>
+                        <input type="text" class="field__input" placeholder="Your full name" required>
+                    </div>
+                    <div class="field">
+                        <label class="field__label">Phone number (MoMo)</label>
+                        <input type="tel" class="field__input" placeholder="0244 123 456" required>
+                    </div>
+                    <div class="field">
+                        <label class="field__label">Email</label>
+                        <input type="email" class="field__input" placeholder="you@email.com" required>
+                    </div>
+                    <div class="field">
+                        <label class="field__label">City</label>
+                        <select class="field__input field__select" required>
+                            <option value="">Select city</option>
+                            <option>Accra</option>
+                            <option>Kumasi</option>
+                            <option>Tamale</option>
+                            <option>Takoradi</option>
+                            <option>Sunyani</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label class="field__label">Why do you want to become a partner?</label>
+                        <textarea class="field__input field__textarea" placeholder="Tell us about your goals..." rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">Submit application — free</button>
+                </form>
+                <p class="modal__note">No payment required. We will review and contact you within 24 hours.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>'''
+
+with open('/mnt/agents/output/index.html', 'w', encoding='utf-8') as f:
+    f.write(html_v2)
+
+print(f"HTML saved: {len(html_v2)} chars")
